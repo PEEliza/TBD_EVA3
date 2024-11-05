@@ -1,0 +1,89 @@
+EVA3_1_FUNCTIONS
+
+MySQL Shell 8.0.38
+
+Copyright (c) 2016, 2024, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS > \sql
+Switching to SQL mode... Commands end with ;
+ MySQL  SQL > \connect --mc root@localhost
+Creating a Classic session to 'root@localhost'
+Fetching global names for auto-completion... Press ^C to stop.
+Your MySQL connection id is 8
+Server version: 8.0.39 MySQL Community Server - GPL
+No default schema selected; type \use <schema> to set one.
+ MySQL  localhost:3306 ssl  SQL > show databases;
++--------------------+
+| Database           |
++--------------------+
+| empresa            |
+| empresa2           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| tbd_eva1           |
+| tbd_eva2           |
+| world              |
++--------------------+
+10 rows in set (0.0023 sec)
+ MySQL  localhost:3306 ssl  SQL > use empresa2;
+Default schema set to `empresa2`.
+Fetching global names, object names from `empresa2` for auto-completion... Press ^C to stop.
+ MySQL  localhost:3306 ssl  empresa2  SQL > show tables;
++--------------------+
+| Tables_in_empresa2 |
++--------------------+
+| countries          |
+| departments        |
+| employees          |
+| job_history        |
+| jobs               |
+| locations          |
+| regions            |
++--------------------+
+7 rows in set (0.0026 sec)
+ MySQL  localhost:3306 ssl  empresa2  SQL > select regresa_valor();
++-----------------+
+| regresa_valor() |
++-----------------+
+|               7 |
++-----------------+
+1 row in set (0.0150 sec)
+ MySQL  localhost:3306 ssl  empresa2  SQL > select mostrar_mensaje();
+ERROR: 1318 (42000): Incorrect number of arguments for FUNCTION empresa2.mostrar_mensaje; expected 1, got 0
+ MySQL  localhost:3306 ssl  empresa2  SQL > select mostrar_mensaje("DUKATI");
++---------------------------+
+| mostrar_mensaje("DUKATI") |
++---------------------------+
+| TU MENSAJE: DUKATI        |
++---------------------------+
+1 row in set (0.0108 sec)
+ MySQL  localhost:3306 ssl  empresa2  SQL > select sumarr_numeros(4,7);
+ERROR: 1305 (42000): FUNCTION empresa2.sumarr_numeros does not exist
+ MySQL  localhost:3306 ssl  empresa2  SQL > select sumar_numeros(4,7);
++--------------------+
+| sumar_numeros(4,7) |
++--------------------+
+|                 11 |
++--------------------+
+1 row in set (0.0012 sec)
+ MySQL  localhost:3306 ssl  empresa2  SQL > select sumar_numeros(4,7);
++--------------------+
+| sumar_numeros(4,7) |
++--------------------+
+|                 11 |
++--------------------+
+1 row in set (0.0015 sec)
+ MySQL  localhost:3306 ssl  empresa2  SQL > select sumar_numeros(400,7);
++----------------------+
+| sumar_numeros(400,7) |
++----------------------+
+|                  407 |
++----------------------+
+1 row in set (0.0006 sec)
+ MySQL  localhost:3306 ssl  empresa2  SQL >
