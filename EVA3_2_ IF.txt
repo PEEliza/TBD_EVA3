@@ -1,0 +1,112 @@
+EVA3_2_ IF 
+
+MySQL Shell 8.0.38
+
+Copyright (c) 2016, 2024, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS > \sql
+Switching to SQL mode... Commands end with ;
+ MySQL  SQL > \connect --mc root@localhost
+Creating a Classic session to 'root@localhost'
+Fetching global names for auto-completion... Press ^C to stop.
+Your MySQL connection id is 24
+Server version: 8.0.39 MySQL Community Server - GPL
+No default schema selected; type \use <schema> to set one.
+ MySQL  localhost:3306 ssl  SQL > create database tbd_eva3;
+Query OK, 1 row affected (0.0249 sec)
+ MySQL  localhost:3306 ssl  SQL > show databases;
++--------------------+
+| Database           |
++--------------------+
+| empresa            |
+| empresa2           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| tbd_eva1           |
+| tbd_eva2           |
+| tbd_eva3           |
+| world              |
++--------------------+
+11 rows in set (0.0039 sec)
+ MySQL  localhost:3306 ssl  SQL > use tbd_eva3;
+Default schema set to `tbd_eva3`.
+Fetching global names, object names from `tbd_eva3` for auto-completion... Press ^C to stop.
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select comparar_numeros(8,10);
++------------------------+
+| comparar_numeros(8,10) |
++------------------------+
+| MENOR                  |
++------------------------+
+1 row in set (0.0150 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select comparar_numeros(10,10);
++-------------------------+
+| comparar_numeros(10,10) |
++-------------------------+
+| IGUAL                   |
++-------------------------+
+1 row in set (0.0014 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select comparar_numeros(20,10);
++-------------------------+
+| comparar_numeros(20,10) |
++-------------------------+
+| MAYOR                   |
++-------------------------+
+1 row in set (0.0013 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select mod(14,7);
++-----------+
+| mod(14,7) |
++-----------+
+|         0 |
++-----------+
+1 row in set (0.0013 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select es_par(10)
+                                         -> ;
++------------+
+| es_par(10) |
++------------+
+| PAR        |
++------------+
+1 row in set (0.0028 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select es_par(7) ;
++-----------+
+| es_par(7) |
++-----------+
+| IMPAR     |
++-----------+
+1 row in set (0.0015 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select dias_semana(7);
+ERROR: 1305 (42000): FUNCTION tbd_eva3.dias_semana does not exist
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select dia_Semana(7);
++---------------+
+| dia_Semana(7) |
++---------------+
+| Sabado        |
++---------------+
+1 row in set (0.0412 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select dia_Semana(1);
++---------------+
+| dia_Semana(1) |
++---------------+
+| Domingo       |
++---------------+
+1 row in set (0.0006 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select conversion_tem(1,58);
+ERROR: 1339 (20000): Case not found for CASE statement
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select conversion_tem(1,58);
+ERROR: 1339 (20000): Case not found for CASE statement
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select conversion_tem(2,58);
+ERROR: 1339 (20000): Case not found for CASE statement
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select conversion_tem(2,58);
++----------------------+
+| conversion_tem(2,58) |
++----------------------+
+|                 -215 |
++----------------------+
+1 row in set (0.0021 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL >
