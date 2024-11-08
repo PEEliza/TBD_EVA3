@@ -1,0 +1,62 @@
+EVA3_3_CICLOS_7
+MySQL Shell 8.0.38
+
+Copyright (c) 2016, 2024, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS > \sql
+Switching to SQL mode... Commands end with ;
+ MySQL  SQL > \connect --mc root@localhost
+Creating a Classic session to 'root@localhost'
+Fetching global names for auto-completion... Press ^C to stop.
+Your MySQL connection id is 44
+Server version: 8.0.39 MySQL Community Server - GPL
+No default schema selected; type \use <schema> to set one.
+ MySQL  localhost:3306 ssl  SQL > use tbd_eva3
+Default schema set to `tbd_eva3`.
+Fetching global names, object names from `tbd_eva3` for auto-completion... Press ^C to stop.
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select potencia_while(5,2);
++---------------------+
+| potencia_while(5,2) |
++---------------------+
+|                   1 |
++---------------------+
+1 row in set (0.0026 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select potencia_repeat(5,2);
++----------------------+
+| potencia_repeat(5,2) |
++----------------------+
+|                  125 |
++----------------------+
+1 row in set (0.0014 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select potencia_loop(5,2);
++--------------------+
+| potencia_loop(5,2) |
++--------------------+
+|                 25 |
++--------------------+
+1 row in set (0.0027 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select potencia_while(5,2);
++---------------------+
+| potencia_while(5,2) |
++---------------------+
+|                  25 |
++---------------------+
+1 row in set (0.0030 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select potencia_repeat(5,2);
++----------------------+
+| potencia_repeat(5,2) |
++----------------------+
+|                  125 |
++----------------------+
+1 row in set (0.0017 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL > select potencia_repeat(5,2);
++----------------------+
+| potencia_repeat(5,2) |
++----------------------+
+|                   25 |
++----------------------+
+1 row in set (0.0012 sec)
+ MySQL  localhost:3306 ssl  tbd_eva3  SQL >
